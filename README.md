@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="css/styles.css">
 # 青鹏网 🌏
 
 ## 父亲月月鸟 | 一种生活在莲二中22班的独特鸟类 | 全球仅此一例
