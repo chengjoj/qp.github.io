@@ -1,7 +1,3 @@
----
-layout: default
----
-
 <link rel="stylesheet" href="css/styles.css">
 # 青鹏网 🌏
 
