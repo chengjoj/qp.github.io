@@ -19,6 +19,14 @@
 <img src="48a2c97a-963f-41ec-b1f5-71569140710f (1).gif" alt="gif">
 <img src="b87aec7b-8e18-4d86-8216-8dadc2087a11.gif" alt="gif">
 
+### 父亲月月鸟的小故事（待写）
+
+### 父亲月月鸟的声音(待研发）
+
+### 其它项目（待定）
+
 ### 📫 联系我
+
+<p>Email: <a href="mailto:2535427005@qq.com">2535427005@qq.com</a></p>
 
 [![Twitter URL](https://img.shields.io/twitter/url?label=email&logo=gmail&style=social&url=http%3A%2F%2Fmailto%3Acontact.ismailhabibi%40gmail.com)](mailto:chengjoj080527@gmail.com)
