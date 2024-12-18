@@ -4,23 +4,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Circular Image without CSS</title>
+    <title>父亲月月鸟</title>
 </head>
 <body>
 
 <img src="GoEnhance-f18a5122-8a6c-4811-aa01-a7d8423912db.gif" alt="圆形图片" style="border-radius: 50%; width: 200px; height: 200px;">
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Circular Image without CSS</title>
-</head>
-<body>
-
-<img src="path/to/your/image.jpg" alt="圆形图片" style="border-radius: 50%; width: 200px; height: 200px;">
 
 </body>
 </html>
