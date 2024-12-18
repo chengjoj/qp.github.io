@@ -73,101 +73,39 @@
 
 
 # 父亲月月鸟的由来
-<div style="position: relative; padding: 40px 0;">
-  <!-- 时间轴线 -->
-  <div style="position: absolute; width: 2px; height: 100%; background-color: #ccc; left: 50%; transform: translateX(-50%);"></div>
-  
-  <!-- 事件1 -->
-  <div style="display: flex; align-items: center; margin-bottom: 30px;">
-    <div style="position: relative; width: 20px; height: 20px; border-radius: 50%; background-color: #ccc; margin-right: 20px;"></div>
-    <div style="flex-grow: 1;">
-      <h3 style="margin: 0 0 10px;">事件一：项目启动</h3>
-      <p>2023年1月，项目正式启动，团队成员集合完毕。</p>
-    </div>
-  </div>
-  
-  <!-- 事件2 -->
-  <div style="display: flex; align-items: center; margin-bottom: 30px;">
-    <div style="position: relative; width: 20px; height: 20px; border-radius: 50%; background-color: #ccc; margin-right: 20px;"></div>
-    <div style="flex-grow: 1;">
-      <h3 style="margin: 0 0 10px;">事件二：市场调研</h3>
-      <p>2023年2月，完成市场调研，收集了重要的用户反馈。</p>
-    </div>
-  </div>
-  
-  <!-- 事件3 -->
-  <div style="display: flex; align-items: center; margin-bottom: 30px;">
-    <div style="position: relative; width: 20px; height: 20px; border-radius: 50%; background-color: #ccc; margin-right: 20px;"></div>
-    <div style="flex-grow: 1;">
-      <h3 style="margin: 0 0 10px;">事件三：产品设计</h3>
-      <p>2023年3月，产品设计完成，进入原型制作阶段。</p>
-    </div>
-  </div>
-  
-  <!-- 事件4 -->
-  <div style="display: flex; align-items: center; margin-bottom: 30px;">
-    <div style="position: relative; width: 20px; height: 20px; border-radius: 50%; background-color: #ccc; margin-right: 20px;"></div>
-    <div style="flex-grow: 1;">
-      <h3 style="margin: 0 0 10px;">事件四：原型测试</h3>
-      <p>2023年4月，原型测试成功，收集反馈进行调整。</p>
-    </div>
-  </div>
-  
-  <!-- 事件5 -->
-  <div style="display: flex; align-items: center; margin-bottom: 30px;">
-    <div style="position: relative; width: 20px; height: 20px; border-radius: 50%; background-color: #ccc; margin-right: 20px;"></div>
-    <div style="flex-grow: 1;">
-      <h3 style="margin: 0 0 10px;">事件五：产品开发</h3>
-      <p>2023年5月，产品开发正式启动，技术团队开始编码。</p>
-    </div>
-  </div>
-  
-  <!-- 事件6 -->
-  <div style="display: flex; align-items: center; margin-bottom: 30px;">
-    <div style="position: relative; width: 20px; height: 20px; border-radius: 50%; background-color: #ccc; margin-right: 20px;"></div>
-    <div style="flex-grow: 1;">
-      <h3 style="margin: 0 0 10px;">事件六：内部测试</h3>
-      <p>2023年6月，产品完成内部测试，准备公开测试。</p>
-    </div>
-  </div>
-  
-  <!-- 事件7 -->
-  <div style="display: flex; align-items: center; margin-bottom: 30px;">
-    <div style="position: relative; width: 20px; height: 20px; border-radius: 50%; background-color: #ccc; margin-right: 20px;"></div>
-    <div style="flex-grow: 1;">
-      <h3 style="margin: 0 0 10px;">事件七：公开测试</h3>
-      <p>2023年7月，产品公开测试，收集用户反馈。</p>
-    </div>
-  </div>
-  
-  <!-- 事件8 -->
-  <div style="display: flex; align-items: center; margin-bottom: 30px;">
-    <div style="position: relative; width: 20px; height: 20px; border-radius: 50%; background-color: #ccc; margin-right: 20px;"></div>
-    <div style="flex-grow: 1;">
-      <h3 style="margin: 0 0 10px;">事件八：产品发布</h3>
-      <p>2023年8月，产品正式发布，市场反响热烈。</p>
-    </div>
-  </div>
-  
-  <!-- 事件9 -->
-  <div style="display: flex; align-items: center; margin-bottom: 30px;">
-    <div style="position: relative; width: 20px; height: 20px; border-radius: 50%; background-color: #ccc; margin-right: 20px;"></div>
-    <div style="flex-grow: 1;">
-      <h3 style="margin: 0 0 10px;">事件九：市场推广</h3>
-      <p>2023年9月，开始大规模市场推广，增加品牌曝光。</p>
-    </div>
-  </div>
-  
-  <!-- 事件10 -->
-  <div style="display: flex; align-items: center;">
-    <div style="position: relative; width: 20px; height: 20px; border-radius: 50%; background-color: #ccc; margin-right: 20px;"></div>
-    <div style="flex-grow: 1;">
-      <h3 style="margin: 0 0 10px;">事件十：年度总结</h3>
-      <p>2023年12月，进行年度总结，规划未来发展方向。</p>
-    </div>
-  </div>
-</div>
+# 时间轴
 
+- **1974年1月**: 事件一：国民党残部寻长生  
+  国民党残部从台湾出发，前往越南的原始深林，寻找长生不老药。
+
+- **1975年2月**: 事件二：性侵答辩  
+  国民党残部的一位传奇人物因为太寂寞，性侵了一位越南原始丛林里的原始人。意外产出一子。
+
+- **1988年3月**: 事件三：生化实验  
+  孩子逐渐长大，但是却被美军看上，被送去驻日美军基地进行生化实验。
+
+- **1999年4月**: 事件四：梅川库子  
+  日本著名av女演员:梅川库子，被日本送给美军，前往驻日美军基地慰安。
+
+- **2008年5月**: 事件五：意外得子  
+  实验初步计划很顺利，被抓的孩子因实验原因容貌不变，同时也获得了被梅川库子安慰的奖励，却意外生出了父亲月月鸟。
+
+- **2008年12月**: 事件六：才华出众  
+  驻日美军对父亲月月鸟进行实验很顺利，因才华出众被美国中情局看上成为特工。
+
+- **2014年7月**: 事件七：特工生活  
+  在美国过着多姿多彩的生活，还担任了加利福尼亚州州长，因为美国很自由所以他的生活很丰富。
+
+- **2015年8月**: 事件八：朝鲜任务  
+  被删除记忆派往朝鲜执行任务。
+
+- **2016年9月**: 事件九：高人教导  
+  在朝鲜生活时不料被某位高人看上，高人告诉他自由民主思想，朝鲜是独裁国家，父亲月月鸟深信不疑。于是他决定从朝鲜逃到中国，再逃到越南，偷渡到美国。
+
+- **2016年12月**: 事件十：逃难中国  
+  在逃到江西南昌时却被中国警察抓住，美国为了不让计划败露，不得已为父亲月月鸟提供了假身份。现在的他在莲二22班当一名普通的高二学生。
+
+## 注：这只是一个大概的，里面不是很细节
 
 
 
