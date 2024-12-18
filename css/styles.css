@@ -1,5 +1,5 @@
 body {
-  background-image: url('/css/20240110_1744911584205082624.jpg'); /* 设置背景图片 */
+  background-image: url('20240110_1744911584205082624.jpg'); /* 设置背景图片 */
   background-size: cover; /* 背景图片覆盖整个页面 */
   background-position: center; /* 背景图片居中显示 */
   background-attachment: fixed; /* 背景图片固定，不随页面滚动 */
