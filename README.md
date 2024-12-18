@@ -1,5 +1,29 @@
 # 青鹏网 🌏
 ### 父亲月月鸟 | 一种生活在莲二中22班的独特鸟类 | 全球仅此一例
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Circular Image without CSS</title>
+</head>
+<body>
+
+<img src="path/to/your/image.jpg" alt="圆形图片" style="border-radius: 50%; width: 200px; height: 200px;">
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Circular Image without CSS</title>
+</head>
+<body>
+
+<img src="path/to/your/image.jpg" alt="圆形图片" style="border-radius: 50%; width: 200px; height: 200px;">
+
+</body>
+</html>
 
 
 
