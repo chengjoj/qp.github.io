@@ -73,6 +73,100 @@
 
 
 # 父亲月月鸟的由来
+<div style="position: relative; padding: 40px 0;">
+  <!-- 时间轴线 -->
+  <div style="position: absolute; width: 2px; height: 100%; background-color: #ccc; left: 50%; transform: translateX(-50%);"></div>
+  
+  <!-- 事件1 -->
+  <div style="display: flex; align-items: center; margin-bottom: 30px;">
+    <div style="position: relative; width: 20px; height: 20px; border-radius: 50%; background-color: #ccc; margin-right: 20px;"></div>
+    <div style="flex-grow: 1;">
+      <h3 style="margin: 0 0 10px;">事件一：项目启动</h3>
+      <p>2023年1月，项目正式启动，团队成员集合完毕。</p>
+    </div>
+  </div>
+  
+  <!-- 事件2 -->
+  <div style="display: flex; align-items: center; margin-bottom: 30px;">
+    <div style="position: relative; width: 20px; height: 20px; border-radius: 50%; background-color: #ccc; margin-right: 20px;"></div>
+    <div style="flex-grow: 1;">
+      <h3 style="margin: 0 0 10px;">事件二：市场调研</h3>
+      <p>2023年2月，完成市场调研，收集了重要的用户反馈。</p>
+    </div>
+  </div>
+  
+  <!-- 事件3 -->
+  <div style="display: flex; align-items: center; margin-bottom: 30px;">
+    <div style="position: relative; width: 20px; height: 20px; border-radius: 50%; background-color: #ccc; margin-right: 20px;"></div>
+    <div style="flex-grow: 1;">
+      <h3 style="margin: 0 0 10px;">事件三：产品设计</h3>
+      <p>2023年3月，产品设计完成，进入原型制作阶段。</p>
+    </div>
+  </div>
+  
+  <!-- 事件4 -->
+  <div style="display: flex; align-items: center; margin-bottom: 30px;">
+    <div style="position: relative; width: 20px; height: 20px; border-radius: 50%; background-color: #ccc; margin-right: 20px;"></div>
+    <div style="flex-grow: 1;">
+      <h3 style="margin: 0 0 10px;">事件四：原型测试</h3>
+      <p>2023年4月，原型测试成功，收集反馈进行调整。</p>
+    </div>
+  </div>
+  
+  <!-- 事件5 -->
+  <div style="display: flex; align-items: center; margin-bottom: 30px;">
+    <div style="position: relative; width: 20px; height: 20px; border-radius: 50%; background-color: #ccc; margin-right: 20px;"></div>
+    <div style="flex-grow: 1;">
+      <h3 style="margin: 0 0 10px;">事件五：产品开发</h3>
+      <p>2023年5月，产品开发正式启动，技术团队开始编码。</p>
+    </div>
+  </div>
+  
+  <!-- 事件6 -->
+  <div style="display: flex; align-items: center; margin-bottom: 30px;">
+    <div style="position: relative; width: 20px; height: 20px; border-radius: 50%; background-color: #ccc; margin-right: 20px;"></div>
+    <div style="flex-grow: 1;">
+      <h3 style="margin: 0 0 10px;">事件六：内部测试</h3>
+      <p>2023年6月，产品完成内部测试，准备公开测试。</p>
+    </div>
+  </div>
+  
+  <!-- 事件7 -->
+  <div style="display: flex; align-items: center; margin-bottom: 30px;">
+    <div style="position: relative; width: 20px; height: 20px; border-radius: 50%; background-color: #ccc; margin-right: 20px;"></div>
+    <div style="flex-grow: 1;">
+      <h3 style="margin: 0 0 10px;">事件七：公开测试</h3>
+      <p>2023年7月，产品公开测试，收集用户反馈。</p>
+    </div>
+  </div>
+  
+  <!-- 事件8 -->
+  <div style="display: flex; align-items: center; margin-bottom: 30px;">
+    <div style="position: relative; width: 20px; height: 20px; border-radius: 50%; background-color: #ccc; margin-right: 20px;"></div>
+    <div style="flex-grow: 1;">
+      <h3 style="margin: 0 0 10px;">事件八：产品发布</h3>
+      <p>2023年8月，产品正式发布，市场反响热烈。</p>
+    </div>
+  </div>
+  
+  <!-- 事件9 -->
+  <div style="display: flex; align-items: center; margin-bottom: 30px;">
+    <div style="position: relative; width: 20px; height: 20px; border-radius: 50%; background-color: #ccc; margin-right: 20px;"></div>
+    <div style="flex-grow: 1;">
+      <h3 style="margin: 0 0 10px;">事件九：市场推广</h3>
+      <p>2023年9月，开始大规模市场推广，增加品牌曝光。</p>
+    </div>
+  </div>
+  
+  <!-- 事件10 -->
+  <div style="display: flex; align-items: center;">
+    <div style="position: relative; width: 20px; height: 20px; border-radius: 50%; background-color: #ccc; margin-right: 20px;"></div>
+    <div style="flex-grow: 1;">
+      <h3 style="margin: 0 0 10px;">事件十：年度总结</h3>
+      <p>2023年12月，进行年度总结，规划未来发展方向。</p>
+    </div>
+  </div>
+</div>
 
 
 
