@@ -14,10 +14,10 @@
 
 ### 在莲二中22班抓拍到的珍贵父亲月月鸟影像
 <img src="8f7fe20c-235c-4615-8e1f-5e503166cc6d (2).gif" alt="gif">
-<img src="8f7fe20c-235c-4615-8e1f-5e503166cc6d (2).gif" alt="gif">
-<img src="8f7fe20c-235c-4615-8e1f-5e503166cc6d (2).gif" alt="gif">
-<img src="8f7fe20c-235c-4615-8e1f-5e503166cc6d (2).gif" alt="gif">
-<img src="8f7fe20c-235c-4615-8e1f-5e503166cc6d (2).gif" alt="gif">
+<img src="7bd7d987-6c7b-4701-8f33-c0aaec26f57c.gif" alt="gif">
+<img src="6d530741-64fc-42c0-89d9-719616232fd6 (1).gif" alt="gif">
+<img src="48a2c97a-963f-41ec-b1f5-71569140710f (1).gif" alt="gif">
+<img src="" alt="gif">
 
 ### 📫 联系我
 
