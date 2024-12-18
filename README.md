@@ -23,7 +23,7 @@
 </head>
 <body>
   <video controls autoplay width="640" height="360">
-    <source src="path-to-your-video.mp4" type="video/mp4">
+    <source src="0fe15cfc-384e-41a3-a77d-8e89c64e9cc5.mp4" type="mp4">
     Your browser does not support the video tag.
   </video>
 </body>
