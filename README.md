@@ -27,6 +27,6 @@
 
 ### 📫 联系我
 
-<p>Email: <a href="mailto:2535427005@qq.com">2535427005@qq.com</a></p>
+[![QQ Email](https://img.shields.io/badge/QQ-Email-blue?logo=qq&style=social)](mailto:2535427005@qq.com)
 
-[![Twitter URL](https://img.shields.io/twitter/url?label=email&logo=gmail&style=social&url=http%3A%2F%2Fmailto%3Acontact.ismailhabibi%40gmail.com)](mailto:chengjoj080527@gmail.com)
+[![Gmail](https://img.shields.io/badge/Gmail-Email-blue?logo=gmail&style=social)](mailto:chengjoj080527@gmail.com)
