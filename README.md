@@ -14,8 +14,6 @@
 
 ### 在莲二中22班抓拍到的珍贵父亲月月鸟影像
 <img src="8f7fe20c-235c-4615-8e1f-5e503166cc6d (2).gif" alt="gif">
-<!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,7 +25,6 @@
     Your browser does not support the video tag.
   </video>
 </body>
-</html>
 
 ### 📫 联系我
 
