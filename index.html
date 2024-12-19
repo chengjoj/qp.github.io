@@ -104,7 +104,7 @@
 </html>
 
 <h3>父亲月月鸟 | 一种生活在莲二中22班的独特鸟类 | 全球仅此一例</h3>
-<h1>目录</h1>
+
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
@@ -120,57 +120,42 @@
             left: 0;
             top: 0;
             bottom: 0;
-            width: 10px; /* 初始宽度，仅为竖线宽度 */
-            overflow: hidden;
-            cursor: pointer; /* 显示可点击的指针样式 */
-            transition: width 0.3s; /* 平滑过渡效果 */
+            width: 200px; /* 初始宽度 */
+            overflow-y: auto; /* 允许垂直滚动 */
+            background: linear-gradient(to right, #0000ff, #ffffff); /* 从左至右的渐变色背景 */
+            color: #fff; /* 字体颜色 */
+            padding: 20px; /* 内边距 */
+            box-sizing: border-box; /* 盒模型 */
         }
 
-        .toc:hover, .toc:focus-within {
-            width: 200px; /* 鼠标悬停或聚焦时的宽度 */
-        }
-
-        .toc::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: linear-gradient(to right, #0000ff, #ff0000); /* 从左至右的渐变色背景 */
-            transition: opacity 0.3s; /* 平滑过渡效果 */
-            opacity: 0; /* 默认不显示 */
-        }
-
-        .toc:hover::before, .toc:focus-within::before {
-            opacity: 1; /* 鼠标悬停或聚焦时显示 */
+        .toc-title {
+            font-size: 24px; /* 大字标题字体大小 */
+            margin-bottom: 20px; /* 与目录项的距离 */
         }
 
         .toc ul {
-            position: absolute;
-            left: 10px; /* 竖线右侧的距离 */
-            top: 0;
             list-style: none;
-            margin: 0;
             padding: 0;
-            white-space: nowrap; /* 防止列表项换行 */
-            line-height: 1.5; /* 行高 */
+            margin: 0;
         }
 
         .toc ul li a {
             text-decoration: none;
-            color: #000;
-            display: block;
-            padding: 5px 10px;
+            color: inherit; /* 继承目录字体颜色 */
+            font-size: 18px; /* 字体大小 */
+            display: block; /* 块级元素 */
+            padding: 10px 0; /* 间距 */
+            transition: color 0.3s; /* 颜色变化过渡效果 */
         }
 
-        .toc ul li a:hover, .toc ul li a:focus {
-            text-decoration: underline;
+        .toc ul li a:hover {
+            color: #ffff00; /* 鼠标悬停时的颜色变化 */
         }
     </style>
 </head>
 <body>
     <div class="toc">
+        <div class="toc-title">目录</div>
         <ul>
             <li><a href="#introduction">🚀 介绍</a></li>
             <li><a href="#father-images">❤️‍🔥父亲月月鸟的珍贵影像❤️‍🔥</a></li>
