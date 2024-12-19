@@ -2,7 +2,7 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background: #f4f4f4; /* 背景颜色 */
+    background: #eef2f7; /* 更改背景颜色 */
 }
 
 .timeline-container {
@@ -25,7 +25,7 @@ body, html {
 
 .timeline-item {
     position: relative;
-    margin-bottom: 50px; /* 调整小标题之间的间隔 */
+    margin-bottom: 80px; /* 增加小标题之间的间隔 */
 }
 
 .timeline-marker {
@@ -48,14 +48,14 @@ body, html {
     position: absolute;
     top: 0;
     left: -170px;
-    font-size: 14px; /* 调整时间字体大小 */
+    font-size: 16px; /* 增加时间字体大小 */
     color: #555;
 }
 
 .timeline-title {
-    font-size: 20px; /* 调整小标题字体大小 */
+    font-size: 24px; /* 增加小标题字体大小 */
     color: #333;
-    margin-bottom: 10px; /* 调整小标题与内容之间的间隔 */
+    margin-bottom: 20px; /* 增加小标题与内容之间的间隔 */
     cursor: pointer;
 }
 
@@ -67,10 +67,6 @@ body, html {
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 4px;
-}
-
-.timeline-item:hover .timeline-content {
-    display: block;
     animation: slideDown 0.5s ease-in-out;
 }
 
@@ -84,4 +80,8 @@ body, html {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.timeline-item:hover .timeline-content {
+    display: block;
 }
