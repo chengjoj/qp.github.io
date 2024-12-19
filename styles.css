@@ -25,5 +25,5 @@
     height: 200px;
     animation: 
         rotateAnimation 20s linear infinite, /* 旋转动画 */
-        moveAnimation 10s linear infinite; /* 移动动画 */
+        moveAnimation 5s linear infinite; /* 移动动画 */
 }
