@@ -5,29 +5,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <style>
-        /* 定义动画 */
-        @keyframes scrollAnimation {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(100%); /* 根据容器宽度调整 */
-            }
-        }
-
-        /* 应用动画到图片 */
-        .rolling-image {
-            border-radius: 50%;
-            width: 200px;
-            height: 200px;
-            animation: scrollAnimation 5s linear infinite; /* 5秒完成一次动画，线性速度，无限循环 */
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css"> <!-- 链接外部CSS文件 -->
 </head>
 <body>
 
-<img src="GoEnhance-f18a5122-8a6c-4811-aa01-a7d8423912db.gif" alt="圆形图片" class="rolling-image">
+<div style="overflow: hidden; width: 200px; height: 200px; position: relative;"> <!-- 限制图片滚动的容器 -->
+    <img src="GoEnhance-f18a5122-8a6c-4811-aa01-a7d8423912db.gif" alt="圆形图片" class="rolling-image">
+</div>
 
 </body>
 </html>
