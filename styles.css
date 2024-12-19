@@ -1,29 +1,42 @@
-/* 定义旋转动画 */
-@keyframes rotateAnimation {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* 防止滚动 */
+    height: 100%; /* 使body高度占满整个视窗高度 */
 }
 
-/* 定义移动动画 */
-@keyframes moveAnimation {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(100%); /* 根据容器宽度调整 */
-    }
-}
-
-/* 应用动画到图片 */
-.rolling-image {
-    border-radius: 50%;
+.bouncing-container {
+    position: relative;
     width: 200px;
     height: 200px;
-    animation: 
-        rotateAnimation 20s linear infinite, /* 旋转动画 */
-        moveAnimation 5s linear infinite; /* 移动动画 */
+    overflow: hidden; /* 防止图片超出容器 */
+    margin: 100px auto; /* 居中显示 */
+    background-color: #f4f4f4; /* 容器背景颜色 */
+    border: 2px solid #ddd; /* 容器边框 */
+    border-radius: 10px; /* 容器圆角 */
+}
+
+.bouncing-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px; /* 调整图片大小 */
+    height: 100px; /* 调整图片大小 */
+    border-radius: 50%; /* 图片圆形 */
+    animation: bounce 5s infinite linear; /* 应用动画 */
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(150px, 0);
+    }
+    50% {
+        transform: translate(150px, 150px);
+    }
+    75% {
+        transform: translate(0, 150px);
+    }
 }
