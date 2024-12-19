@@ -1,1 +1,28 @@
+/* 返回顶部按钮的样式 */
+.back-to-top {
+    position: fixed; /* 固定定位 */
+    left: 10px; /* 距离左边10px */
+    top: 10px; /* 距离顶部10px */
+    z-index: 1000; /* 确保在最上层 */
+    border: none; /* 无边框 */
+    background: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+    padding: 10px; /* 内边距 */
+    border-radius: 50%; /* 圆形 */
+    display: flex; /* 弹性布局 */
+    align-items: center; /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
+    cursor: pointer; /* 鼠标手型 */
+    opacity: 0.7; /* 透明度 */
+    transition: opacity 0.3s; /* 过渡效果 */
+}
+
+.back-to-top:hover {
+    opacity: 1; /* 鼠标悬停时不透明 */
+}
+
+/* 图标样式 */
+.back-to-top img {
+    width: 30px; /* 图标宽度 */
+    height: 30px; /* 图标高度 */
+}
 
