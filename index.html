@@ -104,7 +104,6 @@
 </html>
 
 <h3>父亲月月鸟 | 一种生活在莲二中22班的独特鸟类 | 全球仅此一例</h3>
-
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
@@ -113,19 +112,37 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
+            overflow-x: hidden; /* 防止内容水平滚动 */
         }
 
         .toc {
             position: fixed;
-            left: 0;
+            left: -200px; /* 初始位置在屏幕外 */
             top: 0;
             bottom: 0;
-            width: 200px; /* 初始宽度 */
+            width: 200px; /* 目录宽度 */
             overflow-y: auto; /* 允许垂直滚动 */
             background: linear-gradient(to right, #0000ff, #ffffff); /* 从左至右的渐变色背景 */
             color: #fff; /* 字体颜色 */
             padding: 20px; /* 内边距 */
             box-sizing: border-box; /* 盒模型 */
+            transition: left 0.3s; /* 平滑过渡效果 */
+            cursor: pointer; /* 显示可点击的指针样式 */
+        }
+
+        .toc:hover {
+            left: 0; /* 鼠标悬停时显示目录 */
+        }
+
+        .toc::before {
+            content: '';
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 10px; /* 竖线宽度 */
+            background: linear-gradient(to right, #0000ff, rgba(0, 0, 255, 0)); /* 从左至右的渐变色背景 */
+            z-index: 10;
         }
 
         .toc-title {
@@ -171,6 +188,7 @@
     <!-- 页面的主要内容 -->
 </body>
 </html>
+
 <h1>🚀 介绍</h1>
 <h3>🎓 喜欢吃蘑菇，身上也长满了蘑菇</h3>
 <ul>
