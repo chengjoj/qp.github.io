@@ -1,1 +1,29 @@
+/* 定义旋转动画 */
+@keyframes rotateAnimation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
 
+/* 定义移动动画 */
+@keyframes moveAnimation {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%); /* 根据容器宽度调整 */
+    }
+}
+
+/* 应用动画到图片 */
+.rolling-image {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    animation: 
+        rotateAnimation 2s linear infinite, /* 旋转动画 */
+        moveAnimation 5s linear infinite; /* 移动动画 */
+}
