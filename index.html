@@ -76,9 +76,13 @@
 
             if (posX <= 0 || posX >= bouncingContainer.clientWidth - bouncingCircle.clientWidth) {
                 speedX = -speedX;
+                // 随机改变速度
+                speedX *= 0.95 + Math.random() * 0.1;
             }
             if (posY <= 0 || posY >= bouncingContainer.clientHeight - bouncingCircle.clientHeight) {
                 speedY = -speedY;
+                // 随机改变速度
+                speedY *= 0.95 + Math.random() * 0.1;
             }
 
             bouncingCircle.style.left = posX + 'px';
