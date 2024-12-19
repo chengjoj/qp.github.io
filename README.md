@@ -152,13 +152,11 @@
 
 # 📫 联系我（提意见添加功能）
 
+- [![QQ Email](https://img.shields.io/badge/QQ-Email-blue?logo=qq&style=social)](mailto:2535427005@qq.com)
 
+- [![Gmail](https://img.shields.io/badge/Gmail-Email-blue?logo=gmail&style=social)](mailto:chengjoj080527@gmail.com)
 
-[![QQ Email](https://img.shields.io/badge/QQ-Email-blue?logo=qq&style=social)](mailto:2535427005@qq.com)
-
-[![Gmail](https://img.shields.io/badge/Gmail-Email-blue?logo=gmail&style=social)](mailto:chengjoj080527@gmail.com)
-
-qq群吹水:643361862（密码:付青鹏）
+- qq群吹水:643361862（密码:付青鹏）
 
 
 
