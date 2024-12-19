@@ -1,3 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+
+<!-- 返回顶部的按钮 -->
+<a href="#top" class="back-to-top" aria-label="Back to top">
+    <img src="your-icon.png" alt="Back to Top">
+    <span>top</span>
+</a>
+
+<!-- 页面内容 -->
+<!-- ... -->
+
+<!-- 引入JavaScript文件 -->
+<script src="script.js"></script>
+
+</body>
+</html>
 # 青鹏网 🌏
 - ***注:本站纯属娱乐，本站内容均被付青鹏本人知情且允许，任何与现实相关的内容均为巧合或自定义编写***
 
