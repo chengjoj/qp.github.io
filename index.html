@@ -115,18 +115,19 @@
             font-family: Arial, sans-serif;
         }
 
-        .container {
-            display: flex;
+        .toc {
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 10px; /* 初始宽度，仅为竖线宽度 */
+            overflow: hidden;
+            cursor: pointer; /* 显示可点击的指针样式 */
+            transition: width 0.3s; /* 平滑过渡效果 */
         }
 
-        .toc {
-            position: sticky;
-            top: 0;
-            width: 250px;
-            height: 100vh;
-            overflow-y: auto;
-            padding: 20px;
-            box-sizing: border-box;
+        .toc:hover, .toc:focus-within {
+            width: 200px; /* 鼠标悬停或聚焦时的宽度 */
         }
 
         .toc::before {
@@ -136,66 +137,53 @@
             top: 0;
             bottom: 0;
             width: 2px;
-            background-color: #000;
+            background: linear-gradient(to right, #0000ff, #ff0000); /* 从左至右的渐变色背景 */
+            transition: opacity 0.3s; /* 平滑过渡效果 */
+            opacity: 0; /* 默认不显示 */
+        }
+
+        .toc:hover::before, .toc:focus-within::before {
+            opacity: 1; /* 鼠标悬停或聚焦时显示 */
         }
 
         .toc ul {
+            position: absolute;
+            left: 10px; /* 竖线右侧的距离 */
+            top: 0;
             list-style: none;
-            padding: 0;
             margin: 0;
+            padding: 0;
+            white-space: nowrap; /* 防止列表项换行 */
+            line-height: 1.5; /* 行高 */
         }
 
         .toc ul li a {
             text-decoration: none;
             color: #000;
-            font-size: 16px;
             display: block;
             padding: 5px 10px;
         }
 
-        .toc ul li a:hover {
+        .toc ul li a:hover, .toc ul li a:focus {
             text-decoration: underline;
-        }
-
-        .content {
-            flex-grow: 1;
-            padding: 20px;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 24px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="toc">
-            <ul>
-                <li><a href="#introduction">🚀 介绍</a></li>
-                <li><a href="#father-images">❤️‍🔥父亲月月鸟的珍贵影像❤️‍🔥</a></li>
-                <li><a href="#origin">父亲月月鸟的由来</a></li>
-                <li><a href="#stories">父亲月月鸟的小故事（待写）</a></li>
-                <li><a href="#family">父亲月月鸟的家族（待写）</a></li>
-                <li><a href="#voice">父亲月月鸟的声音(待研发）</a></li>
-                <li><a href="#other-projects">其它项目（待定）</a></li>
-                <li><a href="#contact">📫 联系我（提意见添加功能）</a></li>
-                <li><a href="#statement">声明</a></li>
-            </ul>
-        </div>
-        <div class="content">
-            <!-- 这里将是你页面的主要内容 -->
-            <h1 id="introduction">🚀 介绍</h1>
-            <h1 id="father-images">❤️‍🔥父亲月月鸟的珍贵影像❤️‍🔥</h1>
-            <h1 id="origin">父亲月月鸟的由来</h1>
-            <h1 id="stories">父亲月月鸟的小故事（待写）</h1>
-            <h1 id="family">父亲月月鸟的家族（待写）</h1>
-            <h1 id="voice">父亲月月鸟的声音(待研发）</h1>
-            <h1 id="other-projects">其它项目（待定）</h1>
-            <h1 id="contact">📫 联系我（提意见添加功能）</h1>
-            <h1 id="statement">声明</h1>
-        </div>
+    <div class="toc">
+        <ul>
+            <li><a href="#introduction">🚀 介绍</a></li>
+            <li><a href="#father-images">❤️‍🔥父亲月月鸟的珍贵影像❤️‍🔥</a></li>
+            <li><a href="#origin">父亲月月鸟的由来</a></li>
+            <li><a href="#stories">父亲月月鸟的小故事（待写）</a></li>
+            <li><a href="#family">父亲月月鸟的家族（待写）</a></li>
+            <li><a href="#voice">父亲月月鸟的声音(待研发）</a></li>
+            <li><a href="#other-projects">其它项目（待定）</a></li>
+            <li><a href="#contact">📫 联系我（提意见添加功能）</a></li>
+            <li><a href="#statement">声明</a></li>
+        </ul>
     </div>
+    <!-- 页面的主要内容 -->
 </body>
 </html>
 <h1>🚀 介绍</h1>
