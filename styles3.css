@@ -2,7 +2,7 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background: #f4f4f4;
+    background: #f4f4f4; /* 背景颜色 */
 }
 
 .timeline-container {
@@ -14,6 +14,7 @@ body, html {
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    overflow: hidden; /* 防止内容滑出 */
 }
 
 .timeline {
@@ -24,7 +25,7 @@ body, html {
 
 .timeline-item {
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 50px; /* 调整小标题之间的间隔 */
 }
 
 .timeline-marker {
@@ -47,45 +48,40 @@ body, html {
     position: absolute;
     top: 0;
     left: -170px;
-    font-size: 12px;
+    font-size: 14px; /* 调整时间字体大小 */
     color: #555;
 }
 
 .timeline-title {
-    font-size: 18px;
+    font-size: 20px; /* 调整小标题字体大小 */
     color: #333;
-    margin-bottom: 5px;
+    margin-bottom: 10px; /* 调整小标题与内容之间的间隔 */
     cursor: pointer;
-    position: relative;
-    left: -36px;
 }
 
 .timeline-content {
+    display: none;
     position: relative;
     margin-left: 20px;
-    padding: 15px;
+    padding: 20px;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
-    display: none;
-    width: 300px;
+    border-radius: 4px;
 }
 
 .timeline-item:hover .timeline-content {
     display: block;
-    left: 100%;
-    position: absolute;
-    border-radius: 4px;
+    animation: slideDown 0.5s ease-in-out;
 }
 
-.timeline-content::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    right: -10px;
-    transform: translateY(-50%);
-    width: 0;
-    height: 0;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 10px solid #f9f9f9;
+/* 滑入动画 */
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
