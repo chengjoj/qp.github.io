@@ -1,7 +1,7 @@
 /* 返回顶部按钮的样式 */
 .back-to-top {
     position: fixed; /* 固定定位 */
-    left: 10px; /* 距离左边10px */
+    right: 10px; /* 距离右边10px */
     top: 10px; /* 距离顶部10px */
     z-index: 1000; /* 确保在最上层 */
     display: flex; /* 使用flex布局 */
