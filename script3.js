@@ -4,9 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let posX = 0;
     let posY = 0;
-    let speedX = 5;
-    let speedY = 5;
-    let animationFrameId;
+    let speedX = 2;
+    let speedY = 2;
 
     function moveCircle() {
         posX += speedX;
@@ -25,16 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
         bouncingCircle.style.left = `${posX}px`;
         bouncingCircle.style.top = `${posY}px`;
 
-        animationFrameId = requestAnimationFrame(moveCircle);
+        requestAnimationFrame(moveCircle);
     }
 
-    bouncingContainer.addEventListener('mousedown', (event) => {
-        cancelAnimationFrame(animationFrameId);
-    });
-
-    bouncingContainer.addEventListener('mouseup', (event) => {
-        animationFrameId = requestAnimationFrame(moveCircle);
-    });
-
-    moveCircle();
+    requestAnimationFrame(moveCircle);
 });
