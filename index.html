@@ -53,8 +53,8 @@
         }
         .bouncing-circle {
             position: absolute;
-            width: 100px;
-            height: 100px;
+            width: 50px; /* Adjusted size */
+            height: 50px; /* Adjusted size */
             background-image: url('20240110_1744911584205082624.jpg');
             background-size: cover;
             border-radius: 50%;
@@ -105,7 +105,7 @@
     <div class="error" id="error"></div>
 </div>
 
-<audio id="click-sound"split (1).mp3" preload="auto"></audio>
+<audio id="click-sound" src="click-sound.mp3" preload="auto"></audio>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -135,8 +135,8 @@
                     speedY = -speedY;
                 }
 
-                bouncingCircle.style.left = posX + 'px';
-                bouncingCircle.style.top = posY + 'px';
+                bouncingCircle.style.left = `${posX}px`;
+                bouncingCircle.style.top = `${posY}px`;
             }
             animationFrameId = requestAnimationFrame(moveCircle);
         }
