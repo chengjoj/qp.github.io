@@ -36,6 +36,7 @@
             padding: 0;
             height: 100%;
             background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
         }
         .bouncing-container {
             position: relative;
@@ -45,16 +46,16 @@
             overflow: hidden;
             margin: 50px auto;
             background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 添加阴影 */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
         .bouncing-circle {
             position: absolute;
             width: 100px;
             height: 100px;
-            background-image: url('20240110_1744911584205082624.jpg'); /* 替换为你的图片路径 */
+            background-image: url('20240110_1744911584205082624.jpg');
             background-size: cover;
             border-radius: 50%;
-            cursor: pointer; /* 添加手型光标 */
+            cursor: pointer;
         }
         #speed-slider {
             width: 100%;
@@ -64,6 +65,22 @@
             text-align: center;
             font-size: 14px;
             color: #333;
+        }
+        .message {
+            text-align: center;
+            font-size: 24px;
+            color: #000;
+            position: absolute;
+            top: 20px;
+            width: 100%;
+        }
+        .error {
+            text-align: center;
+            font-size: 14px;
+            color: red;
+            position: absolute;
+            top: 60px;
+            width: 100%;
         }
     </style>
 </head>
@@ -76,7 +93,10 @@
     <div class="bouncing-circle"></div>
 </div>
 
-<audio id="click-sound" src="20241205-110718.mp3" preload="auto"></audio> <!-- 替换为你的音频文件路径 -->
+<div class="message" id="message"></div>
+<div class="error" id="error"></div>
+
+<audio id="click-sound" src="" preload="auto"></audio>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -84,34 +104,48 @@
         var bouncingCircle = document.querySelector('.bouncing-circle');
         var speedSlider = document.getElementById('speed-slider');
         var clickSound = document.getElementById('click-sound');
+        var messageDiv = document.getElementById('message');
+        var errorDiv = document.getElementById('error');
         var posX = bouncingContainer.clientWidth / 2;
         var posY = bouncingContainer.clientHeight / 2;
         var speedX = 5;
         var speedY = 5;
+        var lastClickTime = 0;
+        var clickInterval = 300; // milliseconds
 
         function moveCircle() {
-            posX += speedX;
-            posY += speedY;
+            if (Date.now() - lastClickTime > clickInterval) {
+                posX += speedX;
+                posY += speedY;
 
-            if (posX <= 0 || posX >= bouncingContainer.clientWidth - bouncingCircle.clientWidth) {
-                speedX = -speedX;
+                if (posX <= 0 || posX >= bouncingContainer.clientWidth - bouncingCircle.clientWidth) {
+                    speedX = -speedX;
+                }
+                if (posY <= 0 || posY >= bouncingContainer.clientHeight - bouncingCircle.clientHeight) {
+                    speedY = -speedY;
+                }
+
+                bouncingCircle.style.left = posX + 'px';
+                bouncingCircle.style.top = posY + 'px';
             }
-            if (posY <= 0 || posY >= bouncingContainer.clientHeight - bouncingCircle.clientHeight) {
-                speedY = -speedY;
-            }
-
-            bouncingCircle.style.left = posX + 'px';
-            bouncingCircle.style.top = posY + 'px';
-
             requestAnimationFrame(moveCircle);
         }
 
         function updateSpeed(value) {
-            speedX = speedY = value;
+            speedX = speedY = value / 50; // Adjust the speed range
         }
 
         bouncingCircle.addEventListener('click', function() {
-            clickSound.play();
+            if (Date.now() - lastClickTime > clickInterval) {
+                clickSound.play();
+                messageDiv.textContent = '你已羁绊看片中的父亲月月鸟';
+                setTimeout(function() { messageDiv.textContent = ''; }, 2000);
+                lastClickTime = Date.now();
+                bouncingCircle.style.cursor = 'default';
+            } else {
+                errorDiv.textContent = '请勿连续点击';
+                setTimeout(function() { errorDiv.textContent = ''; }, 2000);
+            }
         });
 
         requestAnimationFrame(moveCircle);
