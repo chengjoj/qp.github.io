@@ -29,6 +29,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Bouncing Circle</title>
     <style>
         body, html {
             margin: 0;
@@ -44,6 +45,7 @@
             overflow: hidden;
             margin: 50px auto;
             background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 添加阴影 */
         }
         .bouncing-circle {
             position: absolute;
@@ -52,25 +54,36 @@
             background-image: url('20240110_1744911584205082624.jpg'); /* 替换为你的图片路径 */
             background-size: cover;
             border-radius: 50%;
+            cursor: pointer; /* 添加手型光标 */
         }
         #speed-slider {
             width: 100%;
             margin: 10px auto;
         }
+        .speed-text {
+            text-align: center;
+            font-size: 14px;
+            color: #333;
+        }
     </style>
 </head>
 <body>
 
+<div class="speed-text">父亲月月鸟的飞行速度</div>
 <input type="range" id="speed-slider" min="1" max="100" value="20" oninput="updateSpeed(this.value)">
 
 <div class="bouncing-container">
     <div class="bouncing-circle"></div>
 </div>
 
+<audio id="click-sound" src="20241205-110718.mp3" preload="auto"></audio> <!-- 替换为你的音频文件路径 -->
+
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         var bouncingContainer = document.querySelector('.bouncing-container');
         var bouncingCircle = document.querySelector('.bouncing-circle');
+        var speedSlider = document.getElementById('speed-slider');
+        var clickSound = document.getElementById('click-sound');
         var posX = bouncingContainer.clientWidth / 2;
         var posY = bouncingContainer.clientHeight / 2;
         var speedX = 5;
@@ -96,6 +109,10 @@
         function updateSpeed(value) {
             speedX = speedY = value;
         }
+
+        bouncingCircle.addEventListener('click', function() {
+            clickSound.play();
+        });
 
         requestAnimationFrame(moveCircle);
     });
