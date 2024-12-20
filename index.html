@@ -29,7 +29,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Bouncing Circle</title>
     <style>
         body, html {
             margin: 0;
@@ -53,22 +52,21 @@
         }
         .bouncing-circle {
             position: absolute;
-            width: 50px; /* Adjusted size */
-            height: 50px; /* Adjusted size */
+            width: 100px;
+            height: 100px;
             background-image: url('20240110_1744911584205082624.jpg');
             background-size: cover;
             border-radius: 50%;
             cursor: pointer;
         }
+        #speed-slider {
+            width: 100%;
+            margin: 10px auto;
+        }
         .speed-text {
             text-align: center;
             font-size: 14px;
             color: #333;
-            margin-bottom: 10px;
-        }
-        .speed-controls {
-            text-align: center;
-            margin-bottom: 20px;
         }
         .message {
             text-align: center;
@@ -94,10 +92,7 @@
 <body>
 
 <div class="speed-text">父亲月月鸟的飞行速度</div>
-<div class="speed-controls">
-    <input type="range" id="speed-slider" min="1" max="10" value="10">
-    <span id="speed-value">50</span>
-</div>
+<input type="range" id="speed-slider" min="1" max="100" value="20" oninput="updateSpeed(this.value)">
 
 <div class="bouncing-container">
     <div class="bouncing-circle"></div>
@@ -105,23 +100,23 @@
     <div class="error" id="error"></div>
 </div>
 
-<audio id="click-sound" src="click-sound.mp3" preload="auto"></audio>
+<audio id="click-sound" src="split (1).mp3" preload="auto"></audio>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         var bouncingContainer = document.querySelector('.bouncing-container');
         var bouncingCircle = document.querySelector('.bouncing-circle');
         var speedSlider = document.getElementById('speed-slider');
-        var speedValue = document.getElementById('speed-value');
+        var clickSound = document.getElementById('click-sound');
         var messageDiv = document.getElementById('message');
         var errorDiv = document.getElementById('error');
         var posX = bouncingContainer.clientWidth / 2;
         var posY = bouncingContainer.clientHeight / 2;
-        var speedX = 2;
-        var speedY = 2;
+        var speedX = 5;
+        var speedY = 5;
         var lastClickTime = 0;
         var clickInterval = 300; // milliseconds
-        var animationFrameId = null;
+        var animationFrameId;
 
         function moveCircle() {
             if (Date.now() - lastClickTime > clickInterval) {
@@ -135,23 +130,18 @@
                     speedY = -speedY;
                 }
 
-                bouncingCircle.style.left = `${posX}px`;
-                bouncingCircle.style.top = `${posY}px`;
+                bouncingCircle.style.left = posX + 'px';
+                bouncingCircle.style.top = posY + 'px';
             }
             animationFrameId = requestAnimationFrame(moveCircle);
         }
 
-        function updateSpeed() {
-            var value = speedSlider.value;
-            speedX = speedY = value;
-            speedValue.textContent = value;
+        function updateSpeed(value) {
+            speedX = speedY = value / 50; // Adjust the speed range
         }
-
-        speedSlider.addEventListener('input', updateSpeed);
 
         bouncingCircle.addEventListener('click', function() {
             if (Date.now() - lastClickTime > clickInterval) {
-                var clickSound = document.getElementById('click-sound');
                 clickSound.play();
                 messageDiv.textContent = '你已羁绊看片中的父亲月月鸟';
                 messageDiv.style.display = 'block';
@@ -159,13 +149,13 @@
                 lastClickTime = Date.now();
                 cancelAnimationFrame(animationFrameId);
                 setTimeout(function() { animationFrameId = requestAnimationFrame(moveCircle); }, 2000);
+                bouncingCircle.style.cursor = 'default';
             } else {
                 errorDiv.textContent = '请勿连续点击';
                 setTimeout(function() { errorDiv.textContent = ''; }, 2000);
             }
         });
 
-        updateSpeed(); // Initialize speed
         animationFrameId = requestAnimationFrame(moveCircle);
     });
 </script>
