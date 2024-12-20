@@ -47,6 +47,9 @@
             margin: 50px auto;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .bouncing-circle {
             position: absolute;
@@ -71,8 +74,10 @@
             font-size: 24px;
             color: #000;
             position: absolute;
-            top: 20px;
-            width: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: bold;
         }
         .error {
             text-align: center;
@@ -86,15 +91,14 @@
 </head>
 <body>
 
-<div class="speed-text">父亲月月鸟的飞行速度</div>
+<div class="speed-text">父亲月月鸟的道观速度</div>
 <input type="range" id="speed-slider" min="1" max="100" value="20" oninput="updateSpeed(this.value)">
 
 <div class="bouncing-container">
     <div class="bouncing-circle"></div>
+    <div class="message" id="message"></div>
+    <div class="error" id="error"></div>
 </div>
-
-<div class="message" id="message"></div>
-<div class="error" id="error"></div>
 
 <audio id="click-sound" src="split (1).mp3" preload="auto"></audio>
 
@@ -112,6 +116,7 @@
         var speedY = 5;
         var lastClickTime = 0;
         var clickInterval = 300; // milliseconds
+        var animationFrameId;
 
         function moveCircle() {
             if (Date.now() - lastClickTime > clickInterval) {
@@ -128,7 +133,6 @@
                 bouncingCircle.style.left = posX + 'px';
                 bouncingCircle.style.top = posY + 'px';
             }
-            requestAnimationFrame(moveCircle);
         }
 
         function updateSpeed(value) {
@@ -139,8 +143,11 @@
             if (Date.now() - lastClickTime > clickInterval) {
                 clickSound.play();
                 messageDiv.textContent = '你已羁绊看片中的父亲月月鸟';
-                setTimeout(function() { messageDiv.textContent = ''; }, 2000);
+                messageDiv.style.display = 'block';
+                setTimeout(function() { messageDiv.style.display = 'none'; }, 2000);
                 lastClickTime = Date.now();
+                cancelAnimationFrame(animationFrameId);
+                setTimeout(function() { animationFrameId = requestAnimationFrame(moveCircle); }, 2000);
                 bouncingCircle.style.cursor = 'default';
             } else {
                 errorDiv.textContent = '请勿连续点击';
@@ -148,7 +155,7 @@
             }
         });
 
-        requestAnimationFrame(moveCircle);
+        animationFrameId = requestAnimationFrame(moveCircle);
     });
 </script>
 </body>
