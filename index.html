@@ -29,6 +29,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Bouncing Circle</title>
     <style>
         body, html {
             margin: 0;
@@ -92,7 +93,9 @@
 <body>
 
 <div class="speed-text">父亲月月鸟的飞行速度</div>
-<input type="range" id="speed-slider" min="1" max="100" value="20" oninput="updateSpeed(this.value)">
+<button id="decrease-speed">-</button>
+<span id="speed-value">2</span>
+<button id="increase-speed">+</button>
 
 <div class="bouncing-container">
     <div class="bouncing-circle"></div>
@@ -106,17 +109,16 @@
     document.addEventListener('DOMContentLoaded', function() {
         var bouncingContainer = document.querySelector('.bouncing-container');
         var bouncingCircle = document.querySelector('.bouncing-circle');
-        var speedSlider = document.getElementById('speed-slider');
-        var clickSound = document.getElementById('click-sound');
         var messageDiv = document.getElementById('message');
         var errorDiv = document.getElementById('error');
+        var speedValue = 2;
         var posX = bouncingContainer.clientWidth / 2;
         var posY = bouncingContainer.clientHeight / 2;
-        var speedX = 5;
-        var speedY = 5;
+        var speedX = 2;
+        var speedY = 2;
         var lastClickTime = 0;
         var clickInterval = 300; // milliseconds
-        var animationFrameId;
+        var animationFrameId = null;
 
         function moveCircle() {
             if (Date.now() - lastClickTime > clickInterval) {
@@ -137,11 +139,21 @@
         }
 
         function updateSpeed(value) {
-            speedX = speedY = value / 50; // Adjust the speed range
+            speedX = speedY = value;
+            document.getElementById('speed-value').textContent = value;
         }
+
+        document.getElementById('increase-speed').addEventListener('click', function() {
+            updateSpeed((speedValue < 100) ? speedValue + 1 : speedValue);
+        });
+
+        document.getElementById('decrease-speed').addEventListener('click', function() {
+            updateSpeed((speedValue > 1) ? speedValue - 1 : speedValue);
+        });
 
         bouncingCircle.addEventListener('click', function() {
             if (Date.now() - lastClickTime > clickInterval) {
+                var clickSound = document.getElementById('click-sound');
                 clickSound.play();
                 messageDiv.textContent = '你已羁绊看片中的父亲月月鸟';
                 messageDiv.style.display = 'block';
@@ -149,14 +161,13 @@
                 lastClickTime = Date.now();
                 cancelAnimationFrame(animationFrameId);
                 setTimeout(function() { animationFrameId = requestAnimationFrame(moveCircle); }, 2000);
-                bouncingCircle.style.cursor = 'default';
             } else {
                 errorDiv.textContent = '请勿连续点击';
                 setTimeout(function() { errorDiv.textContent = ''; }, 2000);
             }
         });
 
-        animationFrameId = requestAnimationFrame(moveCircle);
+        moveCircle();
     });
 </script>
 </body>
