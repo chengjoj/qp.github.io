@@ -29,7 +29,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Bouncing Circle</title>
     <style>
         body, html {
             margin: 0;
@@ -60,14 +59,15 @@
             border-radius: 50%;
             cursor: pointer;
         }
-        #speed-slider {
-            width: 100%;
-            margin: 10px auto;
-        }
         .speed-text {
             text-align: center;
             font-size: 14px;
             color: #333;
+            margin-bottom: 10px;
+        }
+        .speed-controls {
+            text-align: center;
+            margin-bottom: 20px;
         }
         .message {
             text-align: center;
@@ -93,9 +93,10 @@
 <body>
 
 <div class="speed-text">父亲月月鸟的飞行速度</div>
-<button id="decrease-speed">-</button>
-<span id="speed-value">2</span>
-<button id="increase-speed">+</button>
+<div class="speed-controls">
+    <input type="range" id="speed-slider" min="1" max="100" value="50">
+    <span id="speed-value">50</span>
+</div>
 
 <div class="bouncing-container">
     <div class="bouncing-circle"></div>
@@ -109,9 +110,10 @@
     document.addEventListener('DOMContentLoaded', function() {
         var bouncingContainer = document.querySelector('.bouncing-container');
         var bouncingCircle = document.querySelector('.bouncing-circle');
+        var speedSlider = document.getElementById('speed-slider');
+        var speedValue = document.getElementById('speed-value');
         var messageDiv = document.getElementById('message');
         var errorDiv = document.getElementById('error');
-        var speedValue = 2;
         var posX = bouncingContainer.clientWidth / 2;
         var posY = bouncingContainer.clientHeight / 2;
         var speedX = 2;
@@ -138,18 +140,13 @@
             animationFrameId = requestAnimationFrame(moveCircle);
         }
 
-        function updateSpeed(value) {
+        function updateSpeed() {
+            var value = speedSlider.value;
             speedX = speedY = value;
-            document.getElementById('speed-value').textContent = value;
+            speedValue.textContent = value;
         }
 
-        document.getElementById('increase-speed').addEventListener('click', function() {
-            updateSpeed((speedValue < 100) ? speedValue + 1 : speedValue);
-        });
-
-        document.getElementById('decrease-speed').addEventListener('click', function() {
-            updateSpeed((speedValue > 1) ? speedValue - 1 : speedValue);
-        });
+        speedSlider.addEventListener('input', updateSpeed);
 
         bouncingCircle.addEventListener('click', function() {
             if (Date.now() - lastClickTime > clickInterval) {
@@ -167,7 +164,8 @@
             }
         });
 
-        moveCircle();
+        updateSpeed(); // Initialize speed
+        animationFrameId = requestAnimationFrame(moveCircle);
     });
 </script>
 </body>
