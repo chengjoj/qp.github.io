@@ -29,7 +29,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Bouncing Circle</title>
     <style>
         body, html {
             margin: 0;
@@ -78,6 +77,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
             font-weight: bold;
+            display: none;
         }
         .error {
             text-align: center;
@@ -91,7 +91,7 @@
 </head>
 <body>
 
-<div class="speed-text">父亲月月鸟的道观速度</div>
+<div class="speed-text">父亲月月鸟的飞行速度</div>
 <input type="range" id="speed-slider" min="1" max="100" value="20" oninput="updateSpeed(this.value)">
 
 <div class="bouncing-container">
@@ -133,6 +133,7 @@
                 bouncingCircle.style.left = posX + 'px';
                 bouncingCircle.style.top = posY + 'px';
             }
+            animationFrameId = requestAnimationFrame(moveCircle);
         }
 
         function updateSpeed(value) {
